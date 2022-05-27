@@ -28,6 +28,7 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
+#Without Database
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
     'DEFAULT_PERMISSION_CLASSES': [],
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'hanium_backend_DRF.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-#MongoDB
+#Without Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
