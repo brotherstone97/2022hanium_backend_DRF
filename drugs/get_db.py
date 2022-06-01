@@ -21,18 +21,16 @@ def read_all():
 # 특정 키워드가 포함된 필드를 조회
 def read_by_title(title):
     result = []
-    items = col_drugs.find({'product_name':{"$regex":f"{title}"}})
+    #title을 포함하는 row를 추출. {'_id':False}는 id필드를 제외시키는 코드
+    items = col_drugs.find({'product_name': {"$regex":f"{title}"}}, {'_id':False})
     for item in items:
         result.append(item)
 
-    if result:
-        return result
-    else:
-        return ['fail']
+    return result
 #
 #
 # print(read_all())
-results = read_by_title('나릴')
+results = read_by_title('나톤')
 #
 for result in results:
     print(result)
