@@ -14,4 +14,4 @@ def get_db(request):
     result = read_by_title(title)
     print('result: ', result)
     if result:
-        return JsonResponse(status=200, data=result, safe=False, json_dumps_params={'ensure_ascii': False}, content_type=u'application/json'    )
+        return JsonResponse(status=200, data=result, safe=False, json_dumps_params={'ensure_ascii': False})
