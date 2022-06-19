@@ -15,6 +15,7 @@ def get_drug(request):
     result = read_by_title(title)
     print('result: ', result)
     if result:
-        return JsonResponse(status=200, data=result, safe=False, json_dumps_params={'ensure_ascii': False})
+        return JsonResponse(status=200, data=result, safe=False, json_dumps_params={'ensure_ascii': False},
+                            content_type='application/json; charset=utf-8')
     else:
         return Response(status=413)
