@@ -32,5 +32,5 @@ def read_by_title(title):
 # print(read_all())
 results = read_by_title('나톤')
 #
-for result in results:
-    print(result)
+print("=======================================================================================================")
+print(results)

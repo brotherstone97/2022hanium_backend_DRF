@@ -8,10 +8,13 @@ from django.http import JsonResponse
 
 # Create your views here.
 @api_view(['GET'])
-def get_db(request):
+def get_drug(request):
     # query parameter로 받은 title 추출
     title = request.GET['title']
+    print('title: ', title)
     result = read_by_title(title)
     print('result: ', result)
     if result:
         return JsonResponse(status=200, data=result, safe=False, json_dumps_params={'ensure_ascii': False})
+    else:
+        return Response(status=413)
