@@ -27,10 +27,4 @@ def read_by_title(title):
         result.append(item)
 
     return result
-#
-#
-# print(read_all())
-results = read_by_title('나톤')
-#
-print("=======================================================================================================")
-print(results)
+
